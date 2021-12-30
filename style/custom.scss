@@ -1,0 +1,38 @@
+$primary: #008000;
+$secondary: #ffd500;
+
+
+
+@import "../bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: Rockwell;
+    src: url(./fonts/ROCK.TTF);
+}
+
+html {
+    height: 100vh;
+}
+
+h1, h2, p, a {
+    font-family: Rockwell; 
+}
+
+main {
+    height: 89.4vh;
+}
+
+i.fa-instagram {
+    background: linear-gradient(-205deg, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+i.fa-facebook {
+    color: $blue-500;
+}
+
+i.fa-twitter{
+    color: $blue-300;
+}
+ 
