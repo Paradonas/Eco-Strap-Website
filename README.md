@@ -1,2 +1,2 @@
-# Eco-Strap-Webbsite
-Development for Eco-Strap UF Webbpage
+# Eco-Strap-Website
+Development for Eco-Strap UF Webpage
