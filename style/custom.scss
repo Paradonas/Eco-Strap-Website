@@ -12,6 +12,7 @@ $secondary: #ffd500;
 
 html {
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 h1, h2, p, a {
@@ -19,7 +20,11 @@ h1, h2, p, a {
 }
 
 main {
-    height: 89.4vh;
+    height: 89.8vh;
+}
+
+nav {
+    background-color: $gray-800; 
 }
 
 i.fa-instagram {
