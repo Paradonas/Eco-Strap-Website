@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Paradonas/Eco-Strap-Website/issues"
   },
-  "homepage": "https://github.com/Paradonas/Eco-Strap-Website#readme"
+  "homepage": "https://github.com/Paradonas/Eco-Strap-Website#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }

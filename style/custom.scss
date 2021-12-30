@@ -1,9 +1,7 @@
 $primary: #008000;
 $secondary: #ffd500;
 
-
-
-@import "../bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 @font-face {
     font-family: Rockwell;
