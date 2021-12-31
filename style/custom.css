@@ -11987,6 +11987,10 @@ main.darkmode {
   background-color: #6c757d;
 }
 
+main a.darkmode {
+  color: #ffd500;
+}
+
 i.fa-instagram {
   background: linear-gradient(-205deg, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D);
   -webkit-background-clip: text;
