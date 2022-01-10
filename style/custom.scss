@@ -39,6 +39,7 @@ main a.darkmode {
 
 i.fa-instagram {
     background: linear-gradient(-205deg, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -50,4 +51,7 @@ i.fa-facebook {
 i.fa-twitter{
     color: $blue-300;
 }
- 
+
+.navbar-toggler-icon {
+    color: $primary;
+}
