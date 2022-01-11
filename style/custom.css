@@ -11962,7 +11962,7 @@ fieldset:disabled .btn {
   src: url(./fonts/ROCK.TTF);
 }
 
-html {
+html, body {
   height: 100vh;
   scroll-behavior: smooth;
 }
