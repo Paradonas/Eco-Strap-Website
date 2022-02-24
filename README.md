@@ -1,4 +1,4 @@
-# Eco-Strap-Website
+# Eco-Strap Website
 ## -Development for Eco-Strap UF Webpage
 
 This website was created for the purpose of serving as an online webshop for my school company.    
