@@ -6,33 +6,128 @@ $green: #44BF44;
     src: url(/style/fonts/ROCK.TTF);
 }
 
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 html, body {
     margin: 0;
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+width: 7px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+* {
+    color: $green;
+    font-family: Rockwell;
+}
+
 nav {
-    height: 100px;
+    height: 90px;
+    width: 100%;
     background-color: #343A40;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:fixed;
 }
 
-img#navLogo {
-    width: 70%;
+main {
+    min-height: 90.4vh;
+    @include center;
+    flex-direction: column;
+}
+
+section {
+    margin: 200px 0;
+    > img {
+        width: 99.6vw;
+    }
+
+    > img:nth-child(2) {
+        margin-top: -170px;
+    }
+}
+
+footer {
+    height: 90px;
+    background-color: $gray;
+    @include center;
+    text-align: center;
+}
+
+img {
+    &#navLogo {
+        width: 70%;
+    }
+    &.socialmedia {
+        width: 70%;
+        height: 70%;
+    }
+    &#members {
+        width: 100%;
+    }
 }
 
 ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+    padding: 0;
+    @include center;
+    > li {
+        font-size: 1.75rem;
+        margin: 0 22px;
+        text-decoration: none; 
+    }
+
+    &.socialmedia li{
+        margin: 0 10px;
+        @include center;
+    }
+
+    div > hr {
+        border: $green 1px solid;
+        border-radius: 1px;
+        margin-left: -2vw;
+        margin-top: -1px;
+    }
+
+    &#navigation {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
-ul > li {
-    font-family: Rockwell;
-    font-size: 1.75rem;
-    margin: 0 22px;
+a {
     text-decoration: none;
-    
+    &:hover, &:visited {
+        text-decoration:solid;
+    }  
 }
+
+i {
+    font-style: normal;
+    margin-left: -2vw;
+    font-size: 0.8em;
+    text-align: center;
+}
+
