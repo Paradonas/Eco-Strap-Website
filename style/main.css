@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Rockwell;
+  src: url(/style/fonts/ROCK.TTF);
+}
+
+html, body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+nav {
+  height: 100px;
+  background-color: #343A40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+img#navLogo {
+  width: 70%;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+ul > li {
+  font-family: Rockwell;
+  font-size: 1.75rem;
+  margin: 0 22px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
