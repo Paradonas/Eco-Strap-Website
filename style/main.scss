@@ -1,5 +1,8 @@
 $gray: #343A40;
 $green: #44BF44;
+$yellow: #FFC71B;
+$cyan: #009688;
+$galaxy: #283D4E;
 
 @font-face {
     font-family: Rockwell;
@@ -36,7 +39,8 @@ background: #555;
 
 * {
     color: $green;
-    font-family: Rockwell;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 nav {
@@ -131,3 +135,101 @@ i {
     text-align: center;
 }
 
+h1 {
+    background-color: $gray;
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    color: $yellow;
+    letter-spacing: 15px;
+    font-size: 3rem;
+}
+
+div {
+    @include center;
+    &#vision {
+        width: 80vw;
+        > div {
+            @include center();
+            padding: 15px;
+            width: 30vw;
+            background-color: $gray;
+            margin: 80px 350px 80px 80px;
+            > article {
+                > h2 {
+                    color: $yellow;
+                    font-weight: 100;
+                    text-decoration: underline;
+                    font-size: 2rem;
+                    letter-spacing: 2px;
+                }
+                > p {
+                    color: $yellow;
+                    font-size: 1.2em;
+                    font-weight: 100;
+                    letter-spacing: 1.5px;
+                }
+            }
+             
+        }
+
+        aside > img {
+            width: 50%;
+        }   
+    }
+
+    &#kontakt, &#kontaktnät {
+        flex-direction: column;
+        > h1 {
+            color: $cyan;
+            background-color: transparent;
+        }
+        > div {
+            margin: 80px;
+            > p {
+                color: $galaxy;
+                font-size: 1.6rem;
+                margin-right: 200px;
+                letter-spacing: 4px;
+                word-spacing: 6px;
+            }
+            > ul li {
+                margin: 30px;
+                > a img {
+                    width: 100%;
+                }
+            }
+
+        }
+        &> #medverkare {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+
+            &> div.medverkarobjekt {
+                > div {
+                    @include center;
+                    flex-direction: column;
+                    margin: 80px;
+                    > p {
+                        color: $galaxy;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        word-spacing: 4px;
+                    }
+                    > img {
+                        width: 60%;
+
+                        
+                    }
+                }
+                > h2 {
+                    color: $galaxy;
+                    margin: 80px;
+                }
+
+                
+            }
+        }
+    }
+}

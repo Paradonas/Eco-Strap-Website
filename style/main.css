@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Rockwell;
   src: url(/style/fonts/ROCK.TTF);
@@ -27,7 +28,9 @@ html, body {
 
 * {
   color: #44BF44;
-  font-family: Rockwell;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -169,5 +172,140 @@ i {
   margin-left: -2vw;
   font-size: 0.8em;
   text-align: center;
+}
+
+h1 {
+  background-color: #343A40;
+  padding: 30px;
+  text-align: center;
+  font-style: italic;
+  color: #FFC71B;
+  letter-spacing: 15px;
+  font-size: 3rem;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div#vision {
+  width: 80vw;
+}
+
+div#vision > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 30vw;
+  background-color: #343A40;
+  margin: 80px 350px 80px 80px;
+}
+
+div#vision > div > article > h2 {
+  color: #FFC71B;
+  font-weight: 100;
+  text-decoration: underline;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+div#vision > div > article > p {
+  color: #FFC71B;
+  font-size: 1.2em;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+div#vision aside > img {
+  width: 50%;
+}
+
+div#kontakt, div#kontaktnät {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div#kontakt > h1, div#kontaktnät > h1 {
+  color: #009688;
+  background-color: transparent;
+}
+
+div#kontakt > div, div#kontaktnät > div {
+  margin: 80px;
+}
+
+div#kontakt > div > p, div#kontaktnät > div > p {
+  color: #283D4E;
+  font-size: 1.6rem;
+  margin-right: 200px;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+}
+
+div#kontakt > div > ul li, div#kontaktnät > div > ul li {
+  margin: 30px;
+}
+
+div#kontakt > div > ul li > a img, div#kontaktnät > div > ul li > a img {
+  width: 100%;
+}
+
+div#kontakt > #medverkare, div#kontaktnät > #medverkare {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt > div, div#kontaktnät > #medverkare > div.medverkarobjekt > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 80px;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt > div > p, div#kontaktnät > #medverkare > div.medverkarobjekt > div > p {
+  color: #283D4E;
+  font-weight: bold;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt > div > img, div#kontaktnät > #medverkare > div.medverkarobjekt > div > img {
+  width: 60%;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt > h2, div#kontaktnät > #medverkare > div.medverkarobjekt > h2 {
+  color: #283D4E;
+  margin: 80px;
 }
 /*# sourceMappingURL=main.css.map */
