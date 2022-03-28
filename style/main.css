@@ -47,6 +47,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 1;
 }
 
 main {
@@ -66,16 +67,25 @@ main {
           flex-direction: column;
 }
 
-section {
+section.line {
   margin: 200px 0;
 }
 
-section > img {
+section.line > img {
   width: 99.6vw;
 }
 
-section > img:nth-child(2) {
+section.line > img:nth-child(2) {
   margin-top: -170px;
+}
+
+section.lines > img {
+  display: inline;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  height: 800px;
 }
 
 footer {
@@ -272,8 +282,24 @@ div#kontakt > #medverkare, div#kontaktnät > #medverkare {
   display: grid;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: 30vw 30vw;
+      grid-template-columns: 30vw 30vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 160px;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt, div#kontaktnät > #medverkare > div.medverkarobjekt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div, div#kontaktnät > #medverkare > div.medverkarobjekt > div {
@@ -290,7 +316,6 @@ div#kontakt > #medverkare > div.medverkarobjekt > div, div#kontaktnät > #medver
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 80px;
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > p, div#kontaktnät > #medverkare > div.medverkarobjekt > div > p {
@@ -301,11 +326,60 @@ div#kontakt > #medverkare > div.medverkarobjekt > div > p, div#kontaktnät > #me
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > img, div#kontaktnät > #medverkare > div.medverkarobjekt > div > img {
-  width: 60%;
+  height: 100px;
 }
 
-div#kontakt > #medverkare > div.medverkarobjekt > h2, div#kontaktnät > #medverkare > div.medverkarobjekt > h2 {
+div#kontakt > #medverkare > div.medverkarobjekt > div > img.profile, div#kontaktnät > #medverkare > div.medverkarobjekt > div > img.profile {
+  height: 180px;
+}
+
+div#kontakt > #medverkare > div.medverkarobjekt > div > h2, div#kontaktnät > #medverkare > div.medverkarobjekt > div > h2 {
+  font-size: 2.5rem;
   color: #283D4E;
   margin: 80px;
+}
+
+main#shop, main#one {
+  background-color: #343A40;
+  min-height: 100vh;
+}
+
+main#shop div.card, main#one div.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 80vw;
+}
+
+main#shop div.card > img, main#one div.card > img {
+  border-radius: 200px;
+}
+
+main#shop div.card > a h1, main#one div.card > a h1 {
+  text-decoration: underline;
+}
+
+main#shop img#back, main#one img#back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+main#shop div.container, main#one div.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
 }
 /*# sourceMappingURL=main.css.map */

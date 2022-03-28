@@ -51,6 +51,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position:fixed;
+    z-index: 1;
 }
 
 main {
@@ -59,7 +60,7 @@ main {
     flex-direction: column;
 }
 
-section {
+section.line {
     margin: 200px 0;
     > img {
         width: 99.6vw;
@@ -68,6 +69,19 @@ section {
     > img:nth-child(2) {
         margin-top: -170px;
     }
+}
+
+// s stands form line side
+section.lines {
+    > img {
+        display: inline;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0;
+        height: 800px;
+    }
+    
 }
 
 footer {
@@ -204,13 +218,15 @@ div {
         &> #medverkare {
             display: grid;
             grid-template-rows: auto auto;
-            grid-template-columns: auto auto;
+            grid-template-columns: 30vw 30vw;
+            justify-content: space-between;
+            margin-bottom: 160px;
 
             &> div.medverkarobjekt {
+                @include center();
                 > div {
                     @include center;
                     flex-direction: column;
-                    margin: 80px;
                     > p {
                         color: $galaxy;
                         font-weight: bold;
@@ -218,18 +234,50 @@ div {
                         word-spacing: 4px;
                     }
                     > img {
-                        width: 60%;
+                        height: 100px;
 
-                        
+                        &.profile {
+                            height: 180px;
+                        }
                     }
-                }
-                > h2 {
-                    color: $galaxy;
-                    margin: 80px;
-                }
-
-                
+                    > h2 {
+                        font-size: 2.5rem;
+                        color: $galaxy;
+                        margin: 80px;
+                    }
+                } 
             }
         }
+    }
+}
+
+main#shop, main#one {
+    background-color: $gray;
+    min-height: 100vh;
+
+    div.card {
+        @include center;
+        justify-content: space-evenly;
+        width: 80vw;
+
+        > img {
+            border-radius: 200px;
+        }
+
+        > a h1 {
+            text-decoration: underline;
+        }
+    }
+
+    img#back {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    div.container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 2fr 1fr;
     }
 }
