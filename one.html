@@ -17,25 +17,50 @@
         </section>
 
         <div class="container">
-            <div class="productinfo">
-                <div class="imagepresenter">
-                    <img class="imageleft" src="/resources/smarrowl.svg">
-                    <img class="imagescreen" src="/resources/products/one/sickzackhela.jpg">
-                    <img class="imageright" src="/resources/smarrowr.svg">
+            <div class="productInfo">
+                <div class="imagePresenter">
+                    <img id="imageLeft" src="/resources/smarrowl.svg">
+                    <img class="imageScreen" src="/resources/products/one/sickzackhela.jpg">
+                    <img id="imageRight" src="/resources/smarrowr.svg">
                 </div>
-                <h2> Designad med komfort i åtanke. Eco Strap One är vår första utgåva.  </h2>
-                <p> Utifrån den mörka designen erbjuder produkten en låg profil med ett stilrent utseende perfekt för alla miljöer.  
-                    <br>
-                    Självklar designad med miljön i tanken.
-                </p>
+                
             </div>
 
-            <div class="choices">
-                <form>
+            <div class="description">
+                <h2> 
+                    Designad med komfort i åtanke. 
+                    <br> 
+                    Eco Strap One är vår första utgåva. 
+                    <br> <br>
+                    Utifrån den mörka designen erbjuder produkten en låg profil med ett stilrent utseende perfekt för alla miljöer.  
+                </h2>
+            </div>
+
+            <h1> Eco Strap One </h1>
+
+            <form class="choices" action="/" method="post">
+                <div>
                     <label for="name"> För- och efternamn </label>
                     <input type="text" id="name" name="name" placeholder="enter name">
-                </form>
-            </div>
+                </div>
+                <div>
+                    <label for="adress"> Adress för leverancs </label>
+                    <input type="" id="adress" name="adress" placeholder="enter delivery adress">
+                </div>
+                <div>
+                    <label for="email"> E-mail för återkoppling </label>
+                    <input type="email" id="email" name="email" placeholder="enter name">
+                </div>
+                <div>
+                    <label for="antal"> Antal </label>
+                    <input type="number" id="antal" name="antal" placeholder="number">
+                </div>
+                <div>
+                    <label for="name"> För- och efternamn </label>
+                    <input type="text" id="name" name="name" placeholder="enter name">
+                </div>
+                <input type="submit">
+            </form>
         </div>
 
         

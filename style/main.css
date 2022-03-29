@@ -370,16 +370,129 @@ main#shop div.card > a h1, main#one div.card > a h1 {
 
 main#shop img#back, main#one img#back {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 25px;
+  width: 6em;
 }
 
 main#shop div.container, main#one div.container {
+  padding: 2%;
+  height: 100vh;
+  width: 100vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: 2fr 1fr;
-      grid-template-rows: 2fr 1fr;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 10% 60% 30%;
+      grid-template-rows: 10% 60% 30%;
+}
+
+main#shop div.container > .productInfo, main#one div.container > .productInfo {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main#shop div.container > .productInfo > .imagePresenter img.imageScreen, main#one div.container > .productInfo > .imagePresenter img.imageScreen {
+  border-radius: 25px;
+  width: 80%;
+  margin: 0 20px;
+}
+
+main#shop div.container > .productInfo > .imagePresenter img#imageRight, main#shop div.container > .productInfo > .imagePresenter img#imageLeft, main#one div.container > .productInfo > .imagePresenter img#imageRight, main#one div.container > .productInfo > .imagePresenter img#imageLeft {
+  width: 2.5rem;
+}
+
+main#shop div.container > div.description, main#one div.container > div.description {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / 4 / 2;
+  padding: 20px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main#shop div.container > div.description > *, main#one div.container > div.description > * {
+  font-weight: 500;
+  font-size: 1.8em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #FFC71B;
+}
+
+main#shop div.container > h1, main#one div.container > h1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  z-index: 1;
+  color: #FFF;
+  letter-spacing: 12px;
+  word-spacing: 17px;
+  font-size: 4em;
+  font-weight: 500;
+}
+
+main#shop div.container > form.choices, main#one div.container > form.choices {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+main#shop div.container > form.choices > div, main#one div.container > form.choices > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main#shop div.container > form.choices > div > label, main#one div.container > form.choices > div > label {
+  color: #FFF;
+}
+
+main#shop div.container > form.choices > div > input, main#one div.container > form.choices > div > input {
+  background-color: #009688;
+  border-style: none;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */
