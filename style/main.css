@@ -424,7 +424,7 @@ main#shop div.container > div.description, main#one div.container > div.descript
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 3 / 1 / 4 / 2;
-  padding: 20px 15%;
+  padding: 10px 12.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,14 +460,23 @@ main#shop div.container > h1, main#one div.container > h1 {
   word-spacing: 17px;
   font-size: 4em;
   font-weight: 500;
+  background-color: transparent;
 }
 
 main#shop div.container > form.choices, main#one div.container > form.choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 2 / 2 / 3 / 3;
+  row-gap: 10px;
 }
 
 main#shop div.container > form.choices > div, main#one div.container > form.choices > div {
@@ -487,12 +496,50 @@ main#shop div.container > form.choices > div, main#one div.container > form.choi
 }
 
 main#shop div.container > form.choices > div > label, main#one div.container > form.choices > div > label {
+  padding: 2px 0;
   color: #FFF;
+  z-index: 1;
+  width: 78%;
+  font-size: 1.2em;
+  letter-spacing: 1.5px;
+  word-spacing: 5;
 }
 
 main#shop div.container > form.choices > div > input, main#one div.container > form.choices > div > input {
-  background-color: #009688;
+  background-color: rgba(0, 150, 136, 0.8);
   border-style: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  height: 30px;
+  width: 80%;
+  color: #FFF;
+  z-index: 1;
+}
+
+main#shop div.container > form.choices > div > input ::-webkit-input-placeholder, main#one div.container > form.choices > div > input ::-webkit-input-placeholder {
+  color: #FFF;
+}
+
+main#shop div.container > form.choices > div > input :-ms-input-placeholder, main#one div.container > form.choices > div > input :-ms-input-placeholder {
+  color: #FFF;
+}
+
+main#shop div.container > form.choices > div > input ::-ms-input-placeholder, main#one div.container > form.choices > div > input ::-ms-input-placeholder {
+  color: #FFF;
+}
+
+main#shop div.container > form.choices > div > input ::placeholder, main#one div.container > form.choices > div > input ::placeholder {
+  color: #FFF;
+}
+
+main#shop div.container > form.choices > div > textarea, main#one div.container > form.choices > div > textarea {
+  background-color: rgba(0, 150, 136, 0.8);
+  border-style: none;
+  border-radius: 20px;
+  height: 100px;
+  width: 80%;
+  color: #FFF;
+  z-index: 1;
+  resize: none;
+  padding: 10px;
 }
 /*# sourceMappingURL=main.css.map */

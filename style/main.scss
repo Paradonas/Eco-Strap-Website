@@ -303,7 +303,7 @@ main#shop, main#one {
 
         > div.description {
             grid-area: 3 / 1 / 4 / 2;
-            padding: 20px 15%;
+            padding: 10px 12.5%;
             @include center();
             flex-direction: column;
             > * {
@@ -323,22 +323,52 @@ main#shop, main#one {
             word-spacing: 17px;
             font-size: 4em;
             font-weight: 500;
+            background-color: transparent;
         }
 
         > form.choices {
+            display: flex;
+            flex-direction: column;
             grid-area: 2 / 2 / 3 / 3;
+            row-gap: 10px;
             > div {
                 @include center();
                 flex-direction: column;
-
+                
                 > label {
+                    padding: 2px 0;
                     color: #FFF;
+                    z-index: 1;
+                    width: 78%;
+                    font-size: 1.2em;
+                    letter-spacing: 1.5px;
+                    word-spacing: 5;
                 }
 
                 > input {
-                    background-color: $cyan;
+                    background-color: transparentize($color: $cyan, $amount: 0.2);
                     border-style: none;
-                    border-radius: 10px;
+                    border-radius: 20px;
+                    height: 30px;
+                    width: 80%;
+                    color: #FFF;
+                    z-index: 1;
+
+                    ::placeholder {
+                        color: #FFF;
+                    }
+                }
+
+                > textarea {
+                    background-color: transparentize($color: $cyan, $amount: 0.2);
+                    border-style: none;
+                    border-radius: 20px;
+                    height: 100px;
+                    width: 80%;
+                    color: #FFF;
+                    z-index: 1;
+                    resize: none;
+                    padding: 10px;
                 }
             }
         }
