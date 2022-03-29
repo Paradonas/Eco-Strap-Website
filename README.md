@@ -6,7 +6,9 @@ This website was created for the purpose of serving as an online webshop for my 
     
 
   
-The website is still under development. The prototype is currently being developed in the main branch. Later the prototype will go in to the "prototype" branch. The main branch will then contain a reactive and responsive website with standarized code, use of the skeleton library and react for js site management.   
+The website is still under development. The prototype is currently being developed in this branch. Later the prototype will go in to the main branch. The main branch will then contain a reactive and responsive website with standarized code, use of the skeleton library and react for js site management. It may contain JQuery.
+
+This no javascript version is now done.
   
 
 
