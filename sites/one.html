@@ -38,7 +38,7 @@
 
             <h1> Eco Strap One </h1>
 
-            <form class="choices" id="buy" action="/sites/payment.html" method="post">
+            <form class="choices" id="buy" action="/sites/mail.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
                 <div>
                     <label for="name"> För- och efternamn </label>
                     <input type="text" id="name" name="name" placeholder="ange namn" required>
@@ -63,7 +63,7 @@
 
             <div>
                 <a href="/sites/payment.html">
-                    <button type="submit" form="buy"> 
+                    <button type="submit" name="submitBtn" id="submitBtn" form="buy"> 
                         Beställ
                     </button>
                 </a>
