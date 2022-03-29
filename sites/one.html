@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>     
     <main id="one">
-        <img id="back" src="./resources/back.svg">
+        <a href="/sites/shop.html"> <img id="back" src="/resources/back.svg"> </a>
         <section class="lines"> 
-            <img src="./resources/linesc.svg">
-            <img src="./resources/linesy.svg">
-            <img src="./resources/linesg.svg">
+            <img src="/resources/linesc.svg">
+            <img src="/resources/linesy.svg">
+            <img src="/resources/linesg.svg">
         </section>
 
         <div class="container">
             <div class="productInfo">
                 <div class="imagePresenter">
                     <img id="imageLeft" src="/resources/smarrowl.svg">
-                    <img class="imageScreen" src="/resources/products/one/sickzackhela.jpg">
+                    <img class="imageScreen" src="/resources/products/one/rulladande.jpg">
                     <img id="imageRight" src="/resources/smarrowr.svg">
                 </div>
                 
@@ -38,14 +38,14 @@
 
             <h1> Eco Strap One </h1>
 
-            <form class="choices" id="buy" action="/" method="post">
+            <form class="choices" id="buy" action="/sites/payment.html" method="post">
                 <div>
                     <label for="name"> För- och efternamn </label>
-                    <input type="text" id="name" name="name" placeholder="enter name" required>
+                    <input type="text" id="name" name="name" placeholder="ange namn" required>
                 </div>
                 <div>
                     <label for="adress"> Adress för leverancs </label>
-                    <input type="" id="adress" name="adress" placeholder="enter delivery adress" required>
+                    <input type="" id="adress" name="adress" placeholder="ange leveransadress" required>
                 </div>
                 <div>
                     <label for="email"> E-mail för återkoppling </label>
@@ -53,16 +53,23 @@
                 </div>
                 <div>
                     <label for="antal"> Antal </label>
-                    <input type="number" id="antal" name="antal" placeholder="nummer" required>
+                    <input type="number" id="antal" name="antal" placeholder="nummer" min="1" max="5" maxlength="2" required>
                 </div>
                 <div>
                     <label for="annat"> Annat </label>
                     <textarea form="buy" id="annat" name="annat" maxlength="550" placeholder="annat"> asdas</textarea>
                 </div>
             </form>
-        </div>
 
-        
+            <div>
+                <a href="/sites/payment.html">
+                    <button type="submit" form="buy"> 
+                        Beställ
+                    </button>
+                </a>
+                <p> Lagerverifiering genomförs vid beställning</p>
+            </div>
+        </div>
     </main>
 </body>
 </html>
