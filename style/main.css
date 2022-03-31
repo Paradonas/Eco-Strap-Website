@@ -127,12 +127,13 @@ img#navLogo {
 }
 
 img.socialmedia {
-  width: 70%;
-  height: 70%;
+  width: 35px;
+  height: 35px;
 }
 
 img#members {
   width: 100%;
+  margin-top: 80px;
 }
 
 ul {
@@ -161,7 +162,7 @@ ul > li {
 }
 
 ul.socialmedia li {
-  margin: 0 10px;
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,11 +290,11 @@ div#kontakt > div > p, div#kontaktnät > div > p {
 }
 
 div#kontakt > div > ul li, div#kontaktnät > div > ul li {
-  margin: 30px;
+  margin: 0 30px;
 }
 
 div#kontakt > div > ul li > a img, div#kontaktnät > div > ul li > a img {
-  width: 100%;
+  width: 110%;
 }
 
 div#kontakt > #medverkare, div#kontaktnät > #medverkare {
