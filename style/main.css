@@ -66,6 +66,10 @@ nav {
   z-index: 1;
 }
 
+nav > #mobileNav {
+  display: none;
+}
+
 main {
   min-height: 90.4vh;
   display: -webkit-box;
@@ -90,21 +94,11 @@ section.line {
   width: 100%;
   height: 320px;
   overflow: hidden;
-  margin: 80px 0 180px 0;
+  margin: 8vh 0 10vh 0;
 }
 
 section.line#yc {
   background-image: url("/resources/lineyc.svg");
-}
-
-section.lines > img {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  width: 100%;
-  max-height: 70px;
 }
 
 footer {
@@ -119,7 +113,21 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+}
+
+footer div {
+  margin: 0;
+  height: 90px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 img#navLogo {
@@ -204,16 +212,6 @@ i {
   text-align: center;
 }
 
-h1 {
-  background-color: #343A40;
-  padding: 30px;
-  text-align: center;
-  font-style: italic;
-  color: #FFC71B;
-  letter-spacing: 15px;
-  font-size: 3rem;
-}
-
 div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,8 +224,27 @@ div {
           align-items: center;
 }
 
+div#slogan {
+  width: 70vw;
+}
+
+div#slogan > h1 {
+  width: 100%;
+  background-color: #343A40;
+  padding: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
+  color: #FFC71B;
+  letter-spacing: 15px;
+  font-size: 2.8vw;
+}
+
 div#vision {
-  width: 80vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70vw;
+  padding-bottom: 50px;
 }
 
 div#vision > div {
@@ -241,28 +258,39 @@ div#vision > div {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-  width: 30vw;
+  width: 60%;
   background-color: #343A40;
-  margin: 80px 350px 80px 80px;
 }
 
 div#vision > div > article > h2 {
   color: #FFC71B;
   font-weight: 100;
   text-decoration: underline;
-  font-size: 2rem;
+  font-size: 2vw;
   letter-spacing: 2px;
 }
 
 div#vision > div > article > p {
   color: #FFC71B;
-  font-size: 1.2em;
+  font-size: 1.3vw;
   font-weight: 100;
   letter-spacing: 1.5px;
 }
 
+div#vision aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 div#vision aside > img {
-  width: 50%;
+  width: 10vw;
 }
 
 div#kontakt, div#kontaktnät {
@@ -275,6 +303,7 @@ div#kontakt, div#kontaktnät {
 div#kontakt > h1, div#kontaktnät > h1 {
   color: #009688;
   background-color: transparent;
+  font-size: 2vw;
 }
 
 div#kontakt > div, div#kontaktnät > div {
@@ -283,10 +312,10 @@ div#kontakt > div, div#kontaktnät > div {
 
 div#kontakt > div > p, div#kontaktnät > div > p {
   color: #283D4E;
-  font-size: 1.6rem;
+  font-size: 1.5vw;
   margin-right: 200px;
-  letter-spacing: 4px;
-  word-spacing: 6px;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
 }
 
 div#kontakt > div > ul li, div#kontaktnät > div > ul li {
@@ -340,23 +369,24 @@ div#kontakt > #medverkare > div.medverkarobjekt > div, div#kontaktnät > #medver
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > p, div#kontaktnät > #medverkare > div.medverkarobjekt > div > p {
   color: #283D4E;
-  font-weight: bold;
+  font-size: 1.3vw;
+  font-weight: 600;
   letter-spacing: 2px;
   word-spacing: 4px;
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > img, div#kontaktnät > #medverkare > div.medverkarobjekt > div > img {
-  height: 100px;
+  height: 6vw;
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > img.profile, div#kontaktnät > #medverkare > div.medverkarobjekt > div > img.profile {
-  height: 180px;
+  height: 10vw;
 }
 
 div#kontakt > #medverkare > div.medverkarobjekt > div > h2, div#kontaktnät > #medverkare > div.medverkarobjekt > div > h2 {
-  font-size: 2.5rem;
+  font-size: 32px;
   color: #283D4E;
-  margin: 80px;
+  margin-top: 80px;
 }
 
 main#shop, main#one, main#payment {
@@ -382,6 +412,7 @@ main#shop div.card, main#one div.card, main#payment div.card {
 
 main#shop div.card > img, main#one div.card > img, main#payment div.card > img {
   border-radius: 200px;
+  width: 45vw;
 }
 
 main#shop div.card > a, main#one div.card > a, main#payment div.card > a {
@@ -391,6 +422,11 @@ main#shop div.card > a, main#one div.card > a, main#payment div.card > a {
 main#shop div.card > a h1, main#one div.card > a h1, main#payment div.card > a h1 {
   text-decoration: underline;
   background-color: transparent;
+  color: #FFF;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  font-style: oblique;
+  font-size: 3vw;
 }
 
 main#shop img#back, main#one img#back, main#payment img#back {
@@ -465,9 +501,9 @@ main#shop div.container > div.description, main#one div.container > div.descript
           flex-direction: column;
 }
 
-main#shop div.container > div.description > *, main#one div.container > div.description > *, main#payment div.container > div.description > * {
+main#shop div.container > div.description > h2, main#one div.container > div.description > h2, main#payment div.container > div.description > h2 {
   font-weight: 500;
-  font-size: 1.8em;
+  font-size: 1.2vw;
   text-align: center;
   letter-spacing: 2px;
   color: #FFC71B;
@@ -483,10 +519,11 @@ main#shop div.container > h1, main#one div.container > h1, main#payment div.cont
   color: #FFF;
   letter-spacing: 12px;
   word-spacing: 17px;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 600;
   background-color: transparent;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 main#shop div.container > form.choices, main#one div.container > form.choices, main#payment div.container > form.choices {
@@ -596,6 +633,13 @@ main#shop div.container > div p, main#one div.container > div p, main#payment di
   color: #FFC71B;
 }
 
+main#shop, main#one {
+  background-image: url("/resources/lines.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 500px;
+}
+
 main#payment {
   display: -ms-grid;
   display: grid;
@@ -695,5 +739,120 @@ main#payment > article > aside a button {
   font-style: italic;
   font-weight: 300;
   letter-spacing: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  nav div {
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  nav > ul.socialmedia li {
+    display: none;
+  }
+  nav > ul#navigation {
+    display: none;
+  }
+  nav div#mobileNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 90px;
+    background-color: #343A40;
+  }
+  nav div#mobileNav > ul#socialmedia {
+    position: initial;
+  }
+  nav div#mobileNav > ul#navigation {
+    position: initial;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  section.line {
+    margin-bottom: 0;
+  }
+  div#hamburgermenu {
+    display: none;
+    position: initial;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100px;
+    margin-right: 30px;
+  }
+  div#hamburgermenu img {
+    height: 30px;
+  }
+  div#slogan h1 {
+    font-size: 2.2vw;
+    letter-spacing: 10px;
+  }
+  div#vision > div {
+    width: 90%;
+  }
+  div#vision > div > article p {
+    letter-spacing: 1px;
+    font-size: 1.6vw;
+  }
+  div#vision > aside {
+    display: none;
+  }
+  div#kontakt > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  div#kontakt > div > p {
+    margin: 40px 0;
+    font-size: 1.8vw;
+  }
+  main#shop {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main#shop > div.card {
+    margin-top: 150px;
+  }
+  main#one div.container div.description > h2 {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul div {
+    display: none;
+  }
+  div#hamburgermenu {
+    width: 50px;
+  }
+  div#hamburgermenu img {
+    height: 30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

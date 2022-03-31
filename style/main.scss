@@ -57,6 +57,10 @@ nav {
     align-items: center;
     position:fixed;
     z-index: 1;
+
+    > #mobileNav {
+        display: none;
+    }
 }
 
 main {
@@ -72,32 +76,23 @@ section.line {
     width: 100%;
     height: 320px;
     overflow: hidden;
-    margin: 80px 0 180px 0;
+    margin: 8vh 0 10vh 0;
 
     &#yc {
         background-image: url("/resources/lineyc.svg");
     }
 }
 
-// s stands form line side
-section.lines {
-    > img {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 0;
-        width: 100%;
-        max-height: 70px;
-    }
-    
-}
-
 footer {
     height: 90px;
     background-color: $gray;
-    @include center;
-    text-align: center;
+    @include center();
+    div {
+        margin: 0;
+        height: 90px;
+        width: 100%;
+        @include center();
+    }
 }
 
 img {
@@ -159,37 +154,45 @@ i {
     text-align: center;
 }
 
-h1 {
-    background-color: $gray;
-    padding: 30px;
-    text-align: center;
-    font-style: italic;
-    color: $yellow;
-    letter-spacing: 15px;
-    font-size: 3rem;
-}
-
 div {
     @include center;
+    
+
+    &#slogan {
+        width: 70vw;
+        > h1 {
+            width: 100%;
+            background-color: $gray;
+            padding: 30px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-style: italic;
+            color: $yellow;
+            letter-spacing: 15px;
+            font-size: 2.8vw;
+        } 
+    }
+
     &#vision {
-        width: 80vw;
+        justify-content: space-around;
+        width: 70vw;
+        padding-bottom: 50px;
         > div {
             @include center();
             padding: 15px;
-            width: 30vw;
+            width: 60%;
             background-color: $gray;
-            margin: 80px 350px 80px 80px;
             > article {
                 > h2 {
                     color: $yellow;
                     font-weight: 100;
                     text-decoration: underline;
-                    font-size: 2rem;
+                    font-size: 2vw;
                     letter-spacing: 2px;
                 }
                 > p {
                     color: $yellow;
-                    font-size: 1.2em;
+                    font-size: 1.3vw;
                     font-weight: 100;
                     letter-spacing: 1.5px;
                 }
@@ -197,9 +200,12 @@ div {
              
         }
 
-        aside > img {
-            width: 50%;
-        }   
+        aside {
+            @include center();
+            > img {
+                width: 10vw;
+            }   
+        }
     }
 
     &#kontakt, &#kontaktnät {
@@ -207,15 +213,16 @@ div {
         > h1 {
             color: $cyan;
             background-color: transparent;
+            font-size: 2vw;
         }
         > div {
             margin: 80px;
             > p {
                 color: $galaxy;
-                font-size: 1.6rem;
+                font-size: 1.5vw;
                 margin-right: 200px;
-                letter-spacing: 4px;
-                word-spacing: 6px;
+                letter-spacing: 1.5px;
+                word-spacing: 4px;
             }
             > ul li {
                 margin: 0 30px;
@@ -239,21 +246,22 @@ div {
                     flex-direction: column;
                     > p {
                         color: $galaxy;
-                        font-weight: bold;
+                        font-size: 1.3vw;
+                        font-weight: 600;
                         letter-spacing: 2px;
                         word-spacing: 4px;
                     }
                     > img {
-                        height: 100px;
+                        height: 6vw;
 
                         &.profile {
-                            height: 180px;
+                            height: 10vw;
                         }
                     }
                     > h2 {
-                        font-size: 2.5rem;
+                        font-size: 32px;
                         color: $galaxy;
-                        margin: 80px;
+                        margin-top: 80px;
                     }
                 } 
             }
@@ -272,6 +280,7 @@ main#shop, main#one, main#payment {
 
         > img {
             border-radius: 200px;
+            width: 45vw;
         }
 
         > a {
@@ -279,6 +288,11 @@ main#shop, main#one, main#payment {
             h1 {
                 text-decoration: underline;
                 background-color: transparent;
+                color: #FFF;
+                letter-spacing: 2px;
+                word-spacing: 10px;
+                font-style: oblique;
+                font-size: 3vw;
             }
         }
     }
@@ -320,9 +334,9 @@ main#shop, main#one, main#payment {
             padding: 10px 12.5%;
             @include center();
             flex-direction: column;
-            > * {
+            > h2 {
                 font-weight: 500;
-                font-size: 1.8em;
+                font-size: 1.2vw;
                 text-align: center;
                 letter-spacing: 2px;
                 color: $yellow;
@@ -335,10 +349,11 @@ main#shop, main#one, main#payment {
             color: #FFF;
             letter-spacing: 12px;
             word-spacing: 17px;
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 600;
             background-color: transparent;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         > form.choices {
@@ -383,6 +398,8 @@ main#shop, main#one, main#payment {
                     padding: 10px;
                 }
             }
+
+            
         }
 
         > div {
@@ -416,6 +433,13 @@ main#shop, main#one, main#payment {
             }
         }
     }
+}
+
+main#shop, main#one {
+    background-image: url("/resources/lines.svg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 500px;
 }
 
 main#payment {
@@ -475,5 +499,125 @@ main#payment {
             }
         }
     }   
+}
+
+
+@media screen and (max-width: 1200px) {
+    nav {
+        div {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        > ul.socialmedia li {
+            display: none;
+        }
+
+        > ul#navigation {
+            display: none;
+        }
+
+        div#mobileNav {
+            @include center();
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            top: 90px;
+            background-color: $gray;
+
+            > ul#socialmedia {
+                position: initial;
+            }
+
+            > ul#navigation {
+                position: initial;
+                justify-self: center;
+                transform: none;
+            }
+        }
+    }
+
+    section.line {
+        margin-bottom: 0;
+    }
+
+    div#hamburgermenu {
+        display: none;
+        position: initial;
+        padding: 0;
+        @include center();
+        width: 100px;
+        margin-right: 30px;
+        img {
+            height: 30px;
+        }
+    }
+
+    div#slogan {
+        h1 {
+            font-size: 2.2vw;
+            letter-spacing: 10px;
+        }
+    }
+
+    div#vision {
+        > div {
+            width: 90%;
+            > article {
+                p {
+                    letter-spacing: 1px;
+                    font-size: 1.6vw;
+                }
+            }
+        }
+
+        > aside {
+            display: none;
+        }
+    }
+
+    div#kontakt {
+        > div {
+            flex-direction: column-reverse;
+            > p {
+                margin: 40px 0; 
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    main#shop {
+        justify-content: flex-start;
+        > div.card {
+            margin-top: 150px;
+        } 
+    }
+
+    main#one {
+        div.container {
+            div.description {
+                > h2 {
+                    font-size: 1.8vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul div { 
+            display: none;
+    }
+    
+
+    div#hamburgermenu {
+        width: 50px;
+        img {
+            height: 30px;
+        }
+    }
 }
 

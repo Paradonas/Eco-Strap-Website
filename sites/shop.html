@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
     <link rel="stylesheet" href="/style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <nav>
@@ -13,7 +14,6 @@
             <a href="/index.html"> <img id="navLogo" src="/resources/ecostraplogo.png"> </a>
             <div>
                 <i>"Green, Great & Genuine"</i>
-                <hr>
             </div>
         </ul>
         <ul id="navigation">
@@ -26,18 +26,27 @@
             <li> <a href="https://www.facebook.com/people/Eco-strap-UF/100072812757216/"> <img class="socialmedia" src="/resources/facebook.svg"> </a> </li>
             <li> <a href="mailto:eco.strap.uf@gmail.com"> <img class="socialmedia" src="/resources/gmail.svg"> </a> </li>
         </ul>
+        <div id="hamburgermenu">
+            <img src="/resources/hamburgermenu.svg">
+        </div>
+        <div id="mobileNav">
+            <ul id="navigation">
+                <li> <a href="/index.html"> Oss </a> </li>
+                <li> <a href="/sites/shop.html"> Shop </a> </li>
+            </ul>
+            <ul class="socialmedia">
+                <li> <a href="https://www.instagram.com/ecostrapuf/"> <img class="socialmedia" src="/resources/instagram.svg"> </a> </li>
+                <li> <a href="https://twitter.com/eco_strap"> <img class="socialmedia" src="/resources/twitter.svg"> </a> </li>
+                <li> <a href="https://www.facebook.com/people/Eco-strap-UF/100072812757216/"> <img class="socialmedia" src="/resources/facebook.svg"> </a> </li>
+                <li> <a href="mailto:eco.strap.uf@gmail.com"> <img class="socialmedia" src="/resources/gmail.svg"> </a> </li>
+            </ul>
+        </div>
     </nav>
         
     <main id="shop">
-        <section class="lines"> 
-            <img src="/resources/linesc.svg">
-            <img src="/resources/linesy.svg">
-            <img src="/resources/linesg.svg">
-        </section>
-
         <div class="card">
             <img src="/resources/products/one/rulladande.jpg">
-            <a href="/sites/one.html"> <h1> Eco-Strap One </h1> </a>
+            <a href="/sites/one.html"> <h1> Eco Strap One </h1> </a>
         </div>
     </main>
 
@@ -47,5 +56,7 @@
         </div>
         
     </footer>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
