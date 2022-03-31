@@ -5,23 +5,7 @@
     <meta http-equiv="" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sending..</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            background-color: #343A40;
-        }
-        h1 {
-            font-size: 3rem;
-            font-family: 'Arial';
-        }
-    </style>
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
     <?php
@@ -37,9 +21,39 @@
         $header = "From: $from" . "\r\n";
         
         mail($to,$subject,$message,$header);
-        echo '<script>alert("Tack för beställningen. <br> Vi återkommer med tider då vi kan leverera produkten till dig bästa kund. <br> Hoppas du gillar vår produkt.")</script>'; 
-        header('Location: /index.html');
     ?>
+
+<main id="payment">
+        <a href="/sites/shop.html"> <img id="back" src="/resources/back.svg"> </a>
+        <div>
+            <img src="/resources/qr.png">
+        </div>
+        <article>
+            <div>
+                <div>
+                    <p>
+                        Vi erbjuder endast betalning via Swish.
+                        <br>
+                        Fyll i information om för- och efternamn vid betalning med hjälp av Swish meddelande funktion. <br> Vi kan då verifera betalningen.
+                        <br>
+                        <br>
+                        Du kan även välja att betala vid leverans, men då krävs en leveranstid då du är hemma.
+                    </p>
+                </div>
+            </div>
+            <aside>
+                <div>
+                    <a href="/sites/shop.html">
+                        <button> 
+                            Slutför
+                        </button>
+                    </a>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
 
