@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    let btn = $("button")
+    let btn = $("#complete")
     let menu = $("#hamburgermenu")
     let nav = $("#mobileNav")
 

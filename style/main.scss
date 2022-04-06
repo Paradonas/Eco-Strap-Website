@@ -5,6 +5,8 @@ $cyan: #009688;
 $galaxy: #283D4E;
 $monetary: #DA3B4A;
 
+@use "/style/shop.css";
+
 @font-face {
     font-family: Rockwell;
     src: url(/style/fonts/ROCK.TTF);
@@ -61,12 +63,17 @@ nav {
     > #mobileNav {
         display: none;
     }
+
+    > div#hamburgermenu {
+        display: none;
+    }
 }
 
 main {
     min-height: 90.4vh;
     @include center;
     flex-direction: column;
+    z-index: 0;
 }
 
 section.line {
@@ -284,7 +291,6 @@ main#shop, main#one, main#payment {
         }
 
         > a {
-            z-index: 1;
             h1 {
                 text-decoration: underline;
                 background-color: transparent;
@@ -435,7 +441,7 @@ main#shop, main#one, main#payment {
     }
 }
 
-main#shop, main#one {
+main#one {
     background-image: url("/resources/lines.svg");
     background-position: right top;
     background-repeat: no-repeat;
@@ -538,28 +544,26 @@ main#payment {
                 transform: none;
             }
         }
+
+        div#hamburgermenu {
+            position: initial;
+            padding: 0;
+            @include center();
+            width: 5vw;
+            img {
+                height: 30px;
+            }
+        }
     }
 
     section.line {
         margin-bottom: 0;
     }
 
-    div#hamburgermenu {
-        display: none;
-        position: initial;
-        padding: 0;
-        @include center();
-        width: 100px;
-        margin-right: 30px;
-        img {
-            height: 30px;
-        }
-    }
-
     div#slogan {
         h1 {
-            font-size: 2.2vw;
-            letter-spacing: 10px;
+            font-size: 3vw;
+            letter-spacing: 5px;
         }
     }
 
@@ -568,8 +572,12 @@ main#payment {
             width: 90%;
             > article {
                 p {
-                    letter-spacing: 1px;
-                    font-size: 1.6vw;
+                    letter-spacing: 2px;
+                    font-size: 2vw;
+                }
+
+                h2 {
+                    font-size: 3vw;
                 }
             }
         }
@@ -584,16 +592,39 @@ main#payment {
             flex-direction: column-reverse;
             > p {
                 margin: 40px 0; 
-                font-size: 1.8vw;
+                font-size: 2.5vw;
+            }
+        }
+
+        > h1 {
+            font-size: 3vw;
+        }
+    }
+
+    div#kontaktnät {
+        h1 {
+            font-size: 3vw;
+        }
+
+        div#medverkare {
+            column-gap: 10vw;
+
+            div.medverkarobjekt {
+                div {
+                    img.profile {
+                        height: 15vw;
+                    }
+
+                    p {
+                        font-size: 1.8vw;
+                    }
+                }
             }
         }
     }
 
     main#shop {
-        justify-content: flex-start;
-        > div.card {
-            margin-top: 150px;
-        } 
+        justify-content: center;
     }
 
     main#one {
@@ -608,16 +639,34 @@ main#payment {
 }
 
 @media screen and (max-width: 768px) {
-    nav ul div { 
-            display: none;
+    main {
+        width: 106vw;
     }
-    
 
-    div#hamburgermenu {
-        width: 50px;
-        img {
-            height: 30px;
+    nav {
+        justify-content: space-between;
+        ul {
+            a img#navLogo {
+                width: 50%;
+            }
+
+            div i {
+                display: none;
+            }
+
+            
+        }
+
+        div#hamburgermenu {
+            width: 10vw;
+        }
+
+        div#mobileNav {
+            width: 101%;
+            top: 88px;
         }
     }
+
+    
 }
 

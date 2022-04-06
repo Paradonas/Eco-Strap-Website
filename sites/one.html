@@ -33,7 +33,7 @@
 
             <h1> Eco Strap One </h1>
 
-            <form class="choices" id="buy" action="/sites/mail.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+            <form class="choices" id="buy" action="https://formsubmit.co/e64e20b59d59e25914f1fec6f0e49f47" method="post" accept-charset="utf-8" enctype="multipart/form-data">
                 <div>
                     <label for="name"> För- och efternamn </label>
                     <input type="text" id="name" name="name" placeholder="ange namn" required>
@@ -54,6 +54,12 @@
                     <label for="annat"> Annat </label>
                     <textarea form="buy" id="annat" name="annat" maxlength="550" placeholder="annat"> </textarea>
                 </div>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/sites/payment.html">
+                <input type="hidden" name="_subject" value="eco-strap.store sold product">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_autoresponse" value="Thank you for placing your order from Eco-Strap UF">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
             </form>
 
             <div>

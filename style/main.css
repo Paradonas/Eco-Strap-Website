@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "/style/shop.css";
 @font-face {
   font-family: Rockwell;
   src: url(/style/fonts/ROCK.TTF);
@@ -70,6 +71,10 @@ nav > #mobileNav {
   display: none;
 }
 
+nav > div#hamburgermenu {
+  display: none;
+}
+
 main {
   min-height: 90.4vh;
   display: -webkit-box;
@@ -85,6 +90,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 0;
 }
 
 section.line {
@@ -415,10 +421,6 @@ main#shop div.card > img, main#one div.card > img, main#payment div.card > img {
   width: 45vw;
 }
 
-main#shop div.card > a, main#one div.card > a, main#payment div.card > a {
-  z-index: 1;
-}
-
 main#shop div.card > a h1, main#one div.card > a h1, main#payment div.card > a h1 {
   text-decoration: underline;
   background-color: transparent;
@@ -633,7 +635,7 @@ main#shop div.container > div p, main#one div.container > div p, main#payment di
   color: #FFC71B;
 }
 
-main#shop, main#one {
+main#one {
   background-image: url("/resources/lines.svg");
   background-position: right top;
   background-repeat: no-repeat;
@@ -785,11 +787,7 @@ main#payment > article > aside a button {
     -webkit-transform: none;
             transform: none;
   }
-  section.line {
-    margin-bottom: 0;
-  }
-  div#hamburgermenu {
-    display: none;
+  nav div#hamburgermenu {
     position: initial;
     padding: 0;
     display: -webkit-box;
@@ -801,22 +799,27 @@ main#payment > article > aside a button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100px;
-    margin-right: 30px;
+    width: 5vw;
   }
-  div#hamburgermenu img {
+  nav div#hamburgermenu img {
     height: 30px;
   }
+  section.line {
+    margin-bottom: 0;
+  }
   div#slogan h1 {
-    font-size: 2.2vw;
-    letter-spacing: 10px;
+    font-size: 3vw;
+    letter-spacing: 5px;
   }
   div#vision > div {
     width: 90%;
   }
   div#vision > div > article p {
-    letter-spacing: 1px;
-    font-size: 1.6vw;
+    letter-spacing: 2px;
+    font-size: 2vw;
+  }
+  div#vision > div > article h2 {
+    font-size: 3vw;
   }
   div#vision > aside {
     display: none;
@@ -829,15 +832,28 @@ main#payment > article > aside a button {
   }
   div#kontakt > div > p {
     margin: 40px 0;
+    font-size: 2.5vw;
+  }
+  div#kontakt > h1 {
+    font-size: 3vw;
+  }
+  div#kontaktnät h1 {
+    font-size: 3vw;
+  }
+  div#kontaktnät div#medverkare {
+    -webkit-column-gap: 10vw;
+            column-gap: 10vw;
+  }
+  div#kontaktnät div#medverkare div.medverkarobjekt div img.profile {
+    height: 15vw;
+  }
+  div#kontaktnät div#medverkare div.medverkarobjekt div p {
     font-size: 1.8vw;
   }
   main#shop {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  main#shop > div.card {
-    margin-top: 150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main#one div.container div.description > h2 {
     font-size: 1.8vw;
@@ -845,14 +861,26 @@ main#payment > article > aside a button {
 }
 
 @media screen and (max-width: 768px) {
-  nav ul div {
+  main {
+    width: 106vw;
+  }
+  nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul a img#navLogo {
+    width: 50%;
+  }
+  nav ul div i {
     display: none;
   }
-  div#hamburgermenu {
-    width: 50px;
+  nav div#hamburgermenu {
+    width: 10vw;
   }
-  div#hamburgermenu img {
-    height: 30px;
+  nav div#mobileNav {
+    width: 101%;
+    top: 88px;
   }
 }
 /*# sourceMappingURL=main.css.map */
