@@ -4,7 +4,7 @@ $(document).ready(() => {
     let nav = $("#mobileNav")
 
     btn.click(() => {
-        alert("Tack för beställningen. Vi återkommer med tider då vi kan leverera produkten till dig bästa kund. Hoppas du gillar vår produkt.")
+        alert("Produktionen har slutat. Ingen beställning har genomförts.")
     })
 
     menu.click(() => {
